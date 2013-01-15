@@ -1,13 +1,34 @@
 #pragma strict
 
+enum Animations
+{
+	GROUND_SLIDE,
+	LEDGE_GRAB,
+	WALL_CLIMB,
+	WALL_MANTLE,
+	WALL_RUN
+};
+
 public class ParkourNode extends MonoBehaviour
 {
-	protected var _animation : Animation;
-	
-	public function OnCollisionEnter(collider : Collider)
+	protected function getDesiredAnimation(name : String, baseAnimation : Animation)
 	{
-		var anim : Animation = collider.gameObject.GetComponent("Animation");
-		anim.Play();
+		var anims : Component[] = baseAnimation.GetComponentsInChildren(Animation);
+		for (anims : Animation in animations) 
+		{
+			if (anim.name == name)
+			{
+				return anim;
+				break;
+			}
+		}
+		return false;
+	}
+
+	public function OnCollisionEnter(collider : Collision)
+	{
+		//meant to be overloaded by each class, to call respective Animations
+		//and to execute special stuff
 	}
 	
 	public function Start() 

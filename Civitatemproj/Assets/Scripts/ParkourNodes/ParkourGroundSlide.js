@@ -2,7 +2,13 @@
 
 public class ParkourGroundSlide extends ParkourNode
 {
-	public var derp : int = 0;
+	public function OnTriggerEnter(collider : Collider)
+	{
+		var anim : Animation = getDesiredAnimation("anim_parkourgroundslide_hacker_char", collider.gameObject.animation);
+		Debug.Log(anim.name);
+		
+	}
+	
 	public function Start()
 	{
 	
