@@ -11,7 +11,7 @@ enum Animations
 
 public class ParkourNode extends MonoBehaviour
 {
-	protected function getDesiredAnimation(name : String, baseAnimation : Animation)
+	/*protected function getDesiredAnimation(name : String, baseAnimation : Animation)
 	{
 		var anims : Component[] = baseAnimation.GetComponentsInChildren(Animation);
 		for (anims : Animation in animations) 
@@ -23,7 +23,7 @@ public class ParkourNode extends MonoBehaviour
 			}
 		}
 		return false;
-	}
+	}*/
 
 	public function OnCollisionEnter(collider : Collision)
 	{
