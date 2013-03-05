@@ -10,6 +10,9 @@ Temp
 *.userprefs
 .DS_Store
 
+#Unity
+Civitatemproj/*
+
 Library/cache/*
 Library/metadata/*
 Library/previews/*
